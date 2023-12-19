@@ -82,7 +82,7 @@ void SimpleHttpServer::start()
     }
 
     // 监听连接请求
-    if (listen(server_socket, 1) == -1)
+    if (listen(server_socket, 500) == -1)
     {
         std::cerr << "Failed to listen." << std::endl;
         ec_ = 1;
